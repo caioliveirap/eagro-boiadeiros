@@ -1,7 +1,6 @@
 "use client";
 import { Card, Col, List, Select, Typography } from "antd";
-import { Footer } from "antd/es/layout/layout";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Home() {
   const [currentClass, setCurrentClass] = useState({
@@ -149,36 +148,6 @@ export default function Home() {
         >
           Última medição: <span>2h atrás</span>
         </p>
-        {/* <Row gutter={16}>
-          
-          <Col >
-            <Card title="Card title" bordered={false}>
-              Card content
-            </Card>
-          </Col>
-          <Col >
-            <Card title="Card title" bordered={false}>
-              Card content
-            </Card>
-          </Col>
-        </Row> */}
-        {/* <Row gutter={16}>
-          <Col >
-            <Card title="Card title" bordered={false}>
-              Card content
-            </Card>
-          </Col>
-          <Col >
-            <Card title="Card title" bordered={false}>
-              Card content
-            </Card>
-          </Col>
-          <Col >
-            <Card title="Card title" bordered={false}>
-              Card content
-            </Card>
-          </Col>
-        </Row> */}
       </div>
       <div className=" pt-6 text-center">
         <h1 className="text-3xl font-bold pb-6">
