@@ -90,7 +90,7 @@ export default function Home() {
           </span>
         </h1>
         <List
-          className="mb-6 bg-white"
+          className="mb-6 bg-white text-left"
           header={
             <h3 className="font-bold text-lg">
               O que pode ser feito com essa água:
@@ -108,12 +108,22 @@ export default function Home() {
 
       <div className="flex flex-col gap-4 items-center w-full">
         <Col className="w-full">
-          <Card title="pH" bordered={false}>
+          <Card
+            title="pH"
+            bordered={false}
+            extra={<a className="cursor-pointer font-bold text-green-600">7</a>}
+          >
             Na água distribuída é de 6,0 a 9,0
           </Card>
         </Col>
         <Col className="w-full">
-          <Card title="Salinidade" bordered={false}>
+          <Card
+            title="Salinidade"
+            extra={
+              <a className="cursor-pointer font-bold text-green-600">200mg/L</a>
+            }
+            bordered={false}
+          >
             O limite de 250 mg/l de cloreto foi fixado para o fornecimento de
             água potável, pois este é o nível a partir do qual a água passa a
             ter sabor salgado, quando o sódio é o cátion correspondente. Quando
@@ -122,19 +132,37 @@ export default function Home() {
           </Card>
         </Col>
         <Col className="w-full">
-          <Card title="Oxigênio dissolvido" bordered={false}>
+          <Card
+            title="Oxigênio dissolvido"
+            bordered={false}
+            extra={
+              <a className="cursor-pointer font-bold text-green-600">6,3mg/L</a>
+            }
+          >
             O valor mínimo de oxigênio dissolvido (OD) para a preservação da
             vida aquática, estabelecido pela Resolução CONAMA 357/05(2) é de 5,0
             mg/L
           </Card>
         </Col>
         <Col className="w-full">
-          <Card title="Temperatura" bordered={false}>
+          <Card
+            title="Temperatura"
+            bordered={false}
+            extra={
+              <a className="cursor-pointer font-bold text-green-600">27°C</a>
+            }
+          >
             Entre 25°C e 30°C
           </Card>
         </Col>
         <Col className="w-full">
-          <Card title="TDS" bordered={false}>
+          <Card
+            title="TDS"
+            bordered={false}
+            extra={
+              <a className="cursor-pointer font-bold text-green-600">240mg/L</a>
+            }
+          >
             <div className="flex flex-col">
               <span>Excelente (Potável): {"<"}300 mg/l. </span>
               <span>Bom: 300-600 mg/l. </span>
