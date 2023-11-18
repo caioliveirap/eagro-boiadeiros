@@ -91,7 +91,7 @@ export default function Home() {
           </span>
         </h1>
         <List
-          className="mb-6"
+          className="mb-6 bg-white"
           header={
             <h3 className="font-bold text-lg">
               O que pode ser feito com essa água:
@@ -113,7 +113,7 @@ export default function Home() {
             title="pH"
             bordered={false}
             actions={[
-              <p className="text-gray-400 hover:text-gray-500">
+              <p key={"measure1"} className="text-gray-400 hover:text-gray-500">
                 Última medição: <span>2h atrás</span>
               </p>,
             ]}
@@ -126,7 +126,7 @@ export default function Home() {
             title="Salinidade"
             bordered={false}
             actions={[
-              <p className="text-gray-400 hover:text-gray-500">
+              <p key={"measure2"} className="text-gray-400 hover:text-gray-500">
                 Última medição: <span>2h atrás</span>
               </p>,
             ]}
@@ -143,7 +143,7 @@ export default function Home() {
             title="Oxigênio dissolvido"
             bordered={false}
             actions={[
-              <p className="text-gray-400 hover:text-gray-500">
+              <p key={"measure3"} className="text-gray-400 hover:text-gray-500">
                 Última medição: <span>2h atrás</span>
               </p>,
             ]}
@@ -158,7 +158,7 @@ export default function Home() {
             title="Temperatura"
             bordered={false}
             actions={[
-              <p className="text-gray-400 hover:text-gray-500">
+              <p key={"measure4"} className="text-gray-400 hover:text-gray-500">
                 Última medição: <span>2h atrás</span>
               </p>,
             ]}
@@ -171,7 +171,7 @@ export default function Home() {
             title="TDS"
             bordered={false}
             actions={[
-              <p className="text-gray-400 hover:text-gray-500">
+              <p key={"measure5"} className="text-gray-400 hover:text-gray-500">
                 Última medição: <span>2h atrás</span>
               </p>,
             ]}
