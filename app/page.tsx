@@ -109,28 +109,12 @@ export default function Home() {
 
       <div className="flex flex-col gap-4 items-center w-full">
         <Col className="w-full">
-          <Card
-            title="pH"
-            bordered={false}
-            actions={[
-              <p key={"measure1"} className="text-gray-400 hover:text-gray-500">
-                Última medição: <span>2h atrás</span>
-              </p>,
-            ]}
-          >
+          <Card title="pH" bordered={false}>
             Na água distribuída é de 6,0 a 9,0
           </Card>
         </Col>
         <Col className="w-full">
-          <Card
-            title="Salinidade"
-            bordered={false}
-            actions={[
-              <p key={"measure2"} className="text-gray-400 hover:text-gray-500">
-                Última medição: <span>2h atrás</span>
-              </p>,
-            ]}
-          >
+          <Card title="Salinidade" bordered={false}>
             O limite de 250 mg/l de cloreto foi fixado para o fornecimento de
             água potável, pois este é o nível a partir do qual a água passa a
             ter sabor salgado, quando o sódio é o cátion correspondente. Quando
@@ -139,43 +123,19 @@ export default function Home() {
           </Card>
         </Col>
         <Col className="w-full">
-          <Card
-            title="Oxigênio dissolvido"
-            bordered={false}
-            actions={[
-              <p key={"measure3"} className="text-gray-400 hover:text-gray-500">
-                Última medição: <span>2h atrás</span>
-              </p>,
-            ]}
-          >
+          <Card title="Oxigênio dissolvido" bordered={false}>
             O valor mínimo de oxigênio dissolvido (OD) para a preservação da
             vida aquática, estabelecido pela Resolução CONAMA 357/05(2) é de 5,0
             mg/L
           </Card>
         </Col>
         <Col className="w-full">
-          <Card
-            title="Temperatura"
-            bordered={false}
-            actions={[
-              <p key={"measure4"} className="text-gray-400 hover:text-gray-500">
-                Última medição: <span>2h atrás</span>
-              </p>,
-            ]}
-          >
+          <Card title="Temperatura" bordered={false}>
             Entre 25°C e 30°C
           </Card>
         </Col>
         <Col className="w-full">
-          <Card
-            title="TDS"
-            bordered={false}
-            actions={[
-              <p key={"measure5"} className="text-gray-400 hover:text-gray-500">
-                Última medição: <span>2h atrás</span>
-              </p>,
-            ]}
-          >
+          <Card title="TDS" bordered={false}>
             <div className="flex flex-col">
               <span>Excelente (Potável): {"<"}300 mg/l. </span>
               <span>Bom: 300-600 mg/l. </span>
@@ -183,7 +143,12 @@ export default function Home() {
             </div>
           </Card>
         </Col>
-
+        <p
+          key={"measure1"}
+          className="text-gray-400 hover:text-gray-500 cursor-pointer"
+        >
+          Última medição: <span>2h atrás</span>
+        </p>
         {/* <Row gutter={16}>
           
           <Col >
