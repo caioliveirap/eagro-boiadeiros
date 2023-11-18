@@ -1,13 +1,12 @@
 "use client";
-import { Card, Col, List, Row, Select, Typography } from "antd";
-import Image from "next/image";
-import { useState } from "react";
-const { Title } = Typography;
+import { Card, Col, List, Select, Typography } from "antd";
+import { Footer } from "antd/es/layout/layout";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const [currentClass, setCurrentClass] = useState({
     class: "especial",
-    colour: "green",
+    colour: "text-green-500",
     items: [
       "ao abastecimento para consumo humano, com desinfecção;",
       "à preservação do equilíbrio natural das comunidades aquáticas; e",
@@ -17,7 +16,7 @@ export default function Home() {
   const waterClasses = [
     {
       class: "especial",
-      colour: "green",
+      colour: "text-green-500",
       items: [
         "ao abastecimento para consumo humano, com desinfecção;",
         "à preservação do equilíbrio natural das comunidades aquáticas; e",
@@ -26,7 +25,7 @@ export default function Home() {
     },
     {
       class: "um",
-      colour: "green",
+      colour: "text-green-500",
       items: [
         "ao abastecimento para consumo humano, após tratamento simplificado;",
         "à proteção das comunidades aquáticas;",
@@ -37,7 +36,7 @@ export default function Home() {
     },
     {
       class: "dois",
-      colour: "yellow",
+      colour: "text-yellow-500",
       items: [
         "ao abastecimento para consumo humano, após tratamento convencional;",
         "à proteção das comunidades aquáticas; ",
@@ -48,7 +47,7 @@ export default function Home() {
     },
     {
       class: "três",
-      colour: "yellow",
+      colour: "text-yellow-500",
       items: [
         "ao abastecimento para consumo humano, após tratamento convencional ou avançado;",
         "à irrigação de culturas arbóreas, cerealíferas e forrageiras;",
@@ -59,7 +58,7 @@ export default function Home() {
     },
     {
       class: "quatro",
-      colour: "red",
+      colour: "text-red-500",
       items: ["à navegação; e", "à harmonia paisagística."],
     },
   ];
@@ -68,8 +67,8 @@ export default function Home() {
       return item.class === value;
     });
     setCurrentClass(select);
-    console.log(select);
   };
+
   return (
     <section className="">
       <Select
@@ -87,7 +86,7 @@ export default function Home() {
       <div className="w-full text-center">
         <h1 className="text-3xl font-bold pb-3">
           A água no seu reservatório está:{" "}
-          <span className={`text-${currentClass.colour}-500`}>
+          <span className={`${currentClass.colour}`}>
             Classe {currentClass.class}
           </span>
         </h1>
@@ -110,12 +109,28 @@ export default function Home() {
 
       <div className="flex flex-col gap-4 items-center w-full">
         <Col span={8} className="w-full">
-          <Card title="pH" bordered={false}>
+          <Card
+            title="pH"
+            bordered={false}
+            actions={[
+              <p className="text-gray-400 hover:text-gray-500">
+                Última medição: <span>2h atrás</span>
+              </p>,
+            ]}
+          >
             Na água distribuída é de 6,0 a 9,0
           </Card>
         </Col>
         <Col span={8} className="w-full">
-          <Card title="Salinidade" bordered={false}>
+          <Card
+            title="Salinidade"
+            bordered={false}
+            actions={[
+              <p className="text-gray-400 hover:text-gray-500">
+                Última medição: <span>2h atrás</span>
+              </p>,
+            ]}
+          >
             O limite de 250 mg/l de cloreto foi fixado para o fornecimento de
             água potável, pois este é o nível a partir do qual a água passa a
             ter sabor salgado, quando o sódio é o cátion correspondente. Quando
@@ -124,19 +139,43 @@ export default function Home() {
           </Card>
         </Col>
         <Col span={8} className="w-full">
-          <Card title="Oxigênio dissolvido" bordered={false}>
+          <Card
+            title="Oxigênio dissolvido"
+            bordered={false}
+            actions={[
+              <p className="text-gray-400 hover:text-gray-500">
+                Última medição: <span>2h atrás</span>
+              </p>,
+            ]}
+          >
             O valor mínimo de oxigênio dissolvido (OD) para a preservação da
             vida aquática, estabelecido pela Resolução CONAMA 357/05(2) é de 5,0
             mg/L
           </Card>
         </Col>
         <Col span={8} className="w-full">
-          <Card title="Temperatura" bordered={false}>
+          <Card
+            title="Temperatura"
+            bordered={false}
+            actions={[
+              <p className="text-gray-400 hover:text-gray-500">
+                Última medição: <span>2h atrás</span>
+              </p>,
+            ]}
+          >
             Entre 25°C e 30°C
           </Card>
         </Col>
         <Col span={8} className="w-full">
-          <Card title="TDS" bordered={false}>
+          <Card
+            title="TDS"
+            bordered={false}
+            actions={[
+              <p className="text-gray-400 hover:text-gray-500">
+                Última medição: <span>2h atrás</span>
+              </p>,
+            ]}
+          >
             <div className="flex flex-col">
               <span>Excelente (Potável): {"<"}300 mg/l. </span>
               <span>Bom: 300-600 mg/l. </span>
