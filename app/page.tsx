@@ -108,7 +108,7 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col gap-4 items-center w-full">
-        <Col span={8} className="w-full">
+        <Col className="w-full">
           <Card
             title="pH"
             bordered={false}
@@ -121,7 +121,7 @@ export default function Home() {
             Na água distribuída é de 6,0 a 9,0
           </Card>
         </Col>
-        <Col span={8} className="w-full">
+        <Col className="w-full">
           <Card
             title="Salinidade"
             bordered={false}
@@ -138,7 +138,7 @@ export default function Home() {
             1000 mg/l pode ser tolerado sem gosto salgado.
           </Card>
         </Col>
-        <Col span={8} className="w-full">
+        <Col className="w-full">
           <Card
             title="Oxigênio dissolvido"
             bordered={false}
@@ -153,7 +153,7 @@ export default function Home() {
             mg/L
           </Card>
         </Col>
-        <Col span={8} className="w-full">
+        <Col className="w-full">
           <Card
             title="Temperatura"
             bordered={false}
@@ -166,7 +166,7 @@ export default function Home() {
             Entre 25°C e 30°C
           </Card>
         </Col>
-        <Col span={8} className="w-full">
+        <Col className="w-full">
           <Card
             title="TDS"
             bordered={false}
@@ -186,29 +186,29 @@ export default function Home() {
 
         {/* <Row gutter={16}>
           
-          <Col span={8}>
+          <Col >
             <Card title="Card title" bordered={false}>
               Card content
             </Card>
           </Col>
-          <Col span={8}>
+          <Col >
             <Card title="Card title" bordered={false}>
               Card content
             </Card>
           </Col>
         </Row> */}
         {/* <Row gutter={16}>
-          <Col span={8}>
+          <Col >
             <Card title="Card title" bordered={false}>
               Card content
             </Card>
           </Col>
-          <Col span={8}>
+          <Col >
             <Card title="Card title" bordered={false}>
               Card content
             </Card>
           </Col>
-          <Col span={8}>
+          <Col >
             <Card title="Card title" bordered={false}>
               Card content
             </Card>
